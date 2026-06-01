@@ -74,6 +74,12 @@ export default function SmartFit() {
         >
           <SectionLabel id="SYSTEM-002" label="SmartFit Parking" />
 
+          <div className="mb-6 px-4 py-3 bg-sys-surface border border-sys-border rounded-lg">
+            <p className="text-xs text-sys-muted leading-relaxed">
+              Deployed for SmartFit gym — sister system to Plaza Solaz, adapted for gym access control and member validation.
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-3 gap-6">
             {/* Feature grid */}
             <div className="lg:col-span-2 bg-sys-surface border border-sys-border rounded-lg overflow-hidden">

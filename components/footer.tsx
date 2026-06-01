@@ -1,4 +1,5 @@
 import { Terminal } from 'lucide-react'
+import { Linkedin, Github } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -16,10 +17,29 @@ export default function Footer() {
           <span className="font-mono text-xs text-sys-subtle">Cuernavaca, México</span>
           <span className="font-mono text-xs text-sys-subtle">·</span>
           <a
-            href="mailto:marvinsaid1803@gmail.com"
+            href="mailto:marvinsaidlagunaslopez@gmail.com"
             className="font-mono text-xs text-sys-muted hover:text-sys-text transition-colors"
           >
-            marvinsaid1803@gmail.com
+            marvinsaidlagunaslopez@gmail.com
+          </a>
+          <span className="font-mono text-xs text-sys-subtle">·</span>
+          <a
+            href="https://github.com/MarvinS8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sys-muted hover:text-sys-text transition-colors"
+            aria-label="GitHub"
+          >
+            <Github className="w-3.5 h-3.5" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/marvin-said-lagunas-lopez/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sys-muted hover:text-sys-text transition-colors"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

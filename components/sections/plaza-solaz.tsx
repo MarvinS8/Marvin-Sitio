@@ -98,7 +98,7 @@ export default function PlazaSolaz() {
             <span className="font-mono text-xs text-sys-subtle">|</span>
             <span className="text-xs text-sys-muted">Parking Management SaaS</span>
             <span className="font-mono text-xs text-sys-subtle">|</span>
-            <span className="text-xs text-sys-muted">Real customers · Recurring revenue · Live since 2025</span>
+            <span className="text-xs text-sys-muted">Real customers · Recurring revenue · Live since 2026</span>
             <div className="ml-auto flex items-center gap-1.5">
               <CheckCircle className="w-3.5 h-3.5 text-sys-green" />
               <span className="font-mono text-xs text-sys-green">Revenue Active</span>

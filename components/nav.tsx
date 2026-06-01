@@ -61,7 +61,7 @@ export default function Nav() {
             <span className="font-mono text-xs text-sys-green">AVAILABLE</span>
           </div>
           <a
-            href="mailto:marvinsaid1803@gmail.com"
+            href="mailto:marvinsaidlagunaslopez@gmail.com"
             className="px-3 py-1.5 text-xs font-semibold bg-sys-text text-sys-bg rounded-md hover:bg-sys-text/90 transition-colors"
           >
             Hire Engineer
@@ -98,7 +98,7 @@ export default function Nav() {
                 </a>
               ))}
               <a
-                href="mailto:marvinsaid1803@gmail.com"
+                href="mailto:marvinsaidlagunaslopez@gmail.com"
                 className="mt-2 py-2 px-4 text-sm font-semibold bg-sys-text text-sys-bg rounded-md text-center"
               >
                 Hire Engineer

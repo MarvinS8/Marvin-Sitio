@@ -140,7 +140,7 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="mailto:marvinsaid1803@gmail.com"
+                href="mailto:marvinsaidlagunaslopez@gmail.com"
                 className="flex items-center gap-2 px-5 py-2.5 border border-sys-border-b text-sys-text text-sm font-medium rounded-md hover:bg-sys-surface transition-colors"
               >
                 Hire Engineer

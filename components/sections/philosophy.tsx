@@ -66,19 +66,28 @@ export default function Philosophy() {
             </div>
             <div className="flex gap-3">
               <a
-                href="mailto:marvinsaid1803@gmail.com"
+                href="mailto:marvinsaidlagunaslopez@gmail.com"
                 className="flex items-center gap-2 px-5 py-2.5 bg-sys-text text-sys-bg text-sm font-semibold rounded-md hover:bg-sys-text/90 transition-colors"
               >
                 Contact Me
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/MarvinS8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 border border-sys-border-b text-sys-text text-sm font-medium rounded-md hover:bg-sys-surface-2 transition-colors"
               >
                 GitHub
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/marvin-said-lagunas-lopez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 border border-sys-border-b text-sys-text text-sm font-medium rounded-md hover:bg-sys-surface-2 transition-colors"
+              >
+                LinkedIn
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
