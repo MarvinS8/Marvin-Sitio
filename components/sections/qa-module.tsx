@@ -112,47 +112,49 @@ export default function QAModule() {
                 <span className="font-mono text-xs text-sys-muted">k6 · 5 stages</span>
               </div>
 
-              {/* Visual bars */}
-              <div className="p-5 space-y-3">
-                {stages.map((s) => {
-                  const pct = (s.users / maxUsers) * 100
-                  const barColor =
-                    s.status === 'crit'
-                      ? 'bg-sys-red'
-                      : s.status === 'warn'
-                      ? 'bg-sys-amber'
-                      : 'bg-sys-green'
-                  const textColor =
-                    s.status === 'crit'
-                      ? 'text-sys-red'
-                      : s.status === 'warn'
-                      ? 'text-sys-amber'
-                      : 'text-sys-green'
+              {/* Visual bars — scrollable on mobile */}
+              <div className="overflow-x-auto">
+                <div className="p-5 space-y-3 min-w-[360px]">
+                  {stages.map((s) => {
+                    const pct = (s.users / maxUsers) * 100
+                    const barColor =
+                      s.status === 'crit'
+                        ? 'bg-sys-red'
+                        : s.status === 'warn'
+                        ? 'bg-sys-amber'
+                        : 'bg-sys-green'
+                    const textColor =
+                      s.status === 'crit'
+                        ? 'text-sys-red'
+                        : s.status === 'warn'
+                        ? 'text-sys-amber'
+                        : 'text-sys-green'
 
-                  return (
-                    <div key={s.label} className="flex items-center gap-4">
-                      <div className="w-14 font-mono text-xs text-sys-muted shrink-0">{s.label}</div>
-                      <div className="flex-1 h-5 bg-sys-surface-2 border border-sys-border rounded overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${pct}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.8, ease: 'easeOut' }}
-                          className={`h-full ${barColor} opacity-80`}
-                        />
+                    return (
+                      <div key={s.label} className="flex items-center gap-3">
+                        <div className="w-14 font-mono text-xs text-sys-muted shrink-0">{s.label}</div>
+                        <div className="flex-1 h-5 bg-sys-surface-2 border border-sys-border rounded overflow-hidden">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${pct}%` }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, ease: 'easeOut' }}
+                            className={`h-full ${barColor} opacity-80`}
+                          />
+                        </div>
+                        <div className="w-8 font-mono text-xs text-sys-muted shrink-0">{s.users}</div>
+                        <div className={`w-14 font-mono text-xs ${textColor} shrink-0`}>{s.p95}</div>
+                        <div className={`w-12 font-mono text-xs ${textColor} shrink-0`}>{s.errorRate}</div>
                       </div>
-                      <div className="w-8 font-mono text-xs text-sys-muted shrink-0">{s.users}</div>
-                      <div className={`w-16 font-mono text-xs ${textColor} shrink-0`}>{s.p95}</div>
-                      <div className={`w-14 font-mono text-xs ${textColor} shrink-0`}>{s.errorRate}</div>
-                    </div>
-                  )
-                })}
-                <div className="flex items-center gap-4 pt-1 border-t border-sys-border mt-1">
-                  <div className="w-14" />
-                  <div className="flex-1 font-mono text-[10px] text-sys-subtle">LOAD</div>
-                  <div className="w-8 font-mono text-[10px] text-sys-subtle">VUs</div>
-                  <div className="w-16 font-mono text-[10px] text-sys-subtle">p95</div>
-                  <div className="w-14 font-mono text-[10px] text-sys-subtle">err%</div>
+                    )
+                  })}
+                  <div className="flex items-center gap-3 pt-1 border-t border-sys-border mt-1">
+                    <div className="w-14" />
+                    <div className="flex-1 font-mono text-[10px] text-sys-subtle">LOAD</div>
+                    <div className="w-8 font-mono text-[10px] text-sys-subtle">VUs</div>
+                    <div className="w-14 font-mono text-[10px] text-sys-subtle">p95</div>
+                    <div className="w-12 font-mono text-[10px] text-sys-subtle">err%</div>
+                  </div>
                 </div>
               </div>
             </div>

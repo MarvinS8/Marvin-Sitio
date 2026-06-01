@@ -27,7 +27,7 @@ export default function Philosophy() {
             <div className="font-mono text-xs text-sys-muted mb-6 tracking-widest">
               ENGINEERING PHILOSOPHY
             </div>
-            <blockquote className="text-4xl lg:text-5xl font-semibold text-sys-text leading-tight tracking-tight">
+            <blockquote className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-sys-text leading-tight tracking-tight">
               &ldquo;I don&apos;t build websites.
               <br />
               <span className="text-sys-muted">I build systems.&rdquo;</span>
@@ -64,7 +64,7 @@ export default function Philosophy() {
                 Fullstack · QA Automation · SaaS Architecture · Remote-friendly · Mexico-based
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="mailto:marvinsaidlagunaslopez@gmail.com"
                 className="flex items-center gap-2 px-5 py-2.5 bg-sys-text text-sys-bg text-sm font-semibold rounded-md hover:bg-sys-text/90 transition-colors"

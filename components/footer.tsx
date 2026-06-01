@@ -19,43 +19,56 @@ function LinkedinIcon({ className }: { className?: string }) {
 export default function Footer() {
   return (
     <footer className="border-t border-sys-border py-8">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        {/* Brand */}
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded-sm bg-sys-surface-2 border border-sys-border-b flex items-center justify-center">
+          <div className="w-5 h-5 rounded-sm bg-sys-surface-2 border border-sys-border-b flex items-center justify-center shrink-0">
             <Terminal className="w-2.5 h-2.5 text-sys-green" />
           </div>
           <span className="font-mono text-xs text-sys-muted">
-            MARVIN-OS v1.0 — Built with Next.js + TypeScript
+            MARVIN-OS v1.0 — Next.js + TypeScript
           </span>
         </div>
-        <div className="flex items-center gap-4">
+
+        {/* Links */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <span className="font-mono text-xs text-sys-subtle">Cuernavaca, México</span>
-          <span className="font-mono text-xs text-sys-subtle">·</span>
+          {/* Email hidden on xs, shown on sm+ */}
           <a
             href="mailto:marvinsaidlagunaslopez@gmail.com"
-            className="font-mono text-xs text-sys-muted hover:text-sys-text transition-colors"
+            className="hidden sm:inline font-mono text-xs text-sys-muted hover:text-sys-text transition-colors"
           >
             marvinsaidlagunaslopez@gmail.com
           </a>
-          <span className="font-mono text-xs text-sys-subtle">·</span>
-          <a
-            href="https://github.com/MarvinS8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sys-muted hover:text-sys-text transition-colors"
-            aria-label="GitHub"
-          >
-            <GithubIcon className="w-3.5 h-3.5" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/marvin-said-lagunas-lopez/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sys-muted hover:text-sys-text transition-colors"
-            aria-label="LinkedIn"
-          >
-            <LinkedinIcon className="w-3.5 h-3.5" />
-          </a>
+          {/* Social icons */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://github.com/MarvinS8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sys-muted hover:text-sys-text transition-colors"
+              aria-label="GitHub"
+            >
+              <GithubIcon className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marvin-said-lagunas-lopez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sys-muted hover:text-sys-text transition-colors"
+              aria-label="LinkedIn"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
+            {/* Email icon on xs only */}
+            <a
+              href="mailto:marvinsaidlagunaslopez@gmail.com"
+              className="sm:hidden text-sys-muted hover:text-sys-text transition-colors text-xs font-mono"
+              aria-label="Email"
+            >
+              Email
+            </a>
+          </div>
         </div>
       </div>
     </footer>

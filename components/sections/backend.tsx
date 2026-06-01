@@ -79,11 +79,11 @@ export default function Backend() {
                   <span className="font-mono text-xs text-sys-muted">{endpoints.length} routes</span>
                 </div>
               </div>
-              <div className="divide-y divide-sys-border">
+              <div className="divide-y divide-sys-border overflow-x-auto">
                 {endpoints.map((ep) => (
                   <div
                     key={ep.path}
-                    className="flex items-center gap-4 px-5 py-3 hover:bg-sys-surface-2 transition-colors"
+                    className="flex items-center gap-3 px-5 py-3 hover:bg-sys-surface-2 transition-colors min-w-0"
                   >
                     <span
                       className={`font-mono text-xs font-semibold w-10 shrink-0 ${
@@ -92,10 +92,10 @@ export default function Backend() {
                     >
                       {ep.method}
                     </span>
-                    <span className="font-mono text-xs text-sys-text flex-1 truncate">
+                    <span className="font-mono text-xs text-sys-text flex-1 truncate min-w-0">
                       {ep.path}
                     </span>
-                    <span className="text-xs text-sys-muted hidden sm:block truncate max-w-[160px]">
+                    <span className="text-xs text-sys-muted hidden md:block truncate max-w-[160px] shrink-0">
                       {ep.desc}
                     </span>
                     {ep.auth && (

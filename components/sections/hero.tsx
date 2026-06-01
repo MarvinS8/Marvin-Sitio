@@ -94,7 +94,7 @@ export default function Hero() {
 
             {/* Name */}
             <div>
-              <h1 className="text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight text-sys-text">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight text-sys-text">
                 Marvin Said
                 <br />
                 <span className="text-sys-muted">Lagunas López</span>
